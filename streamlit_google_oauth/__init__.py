@@ -46,7 +46,7 @@ def login_button(authorization_url, app_name, app_desc):
 
 
 def logout_button(button_text):
-    if st.button(button_text):
+    if st.sidebar.button(button_text):
         asyncio.run(
             revoke_token(
                 client=st.session_state.client,
